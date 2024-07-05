@@ -22,7 +22,7 @@ export class EmployeesController {
 
   @Get()
   findAll(@Query('role') role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
-    return this.employeesService.findAll();
+    return this.employeesService.findAll(role);
   }
 
   @Get(':id')
